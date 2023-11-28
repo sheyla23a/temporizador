@@ -16,10 +16,35 @@ main {
   flex-grow: 1;
 }
 
+
+
 .navbarEstilo {
     background-color: rgba(255, 255, 255, 0.8); 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.timer-container {
+  text-align: center;
+  margin-top: 3em;
+}
+
+#timer {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+
 
 .footerEstilo{
     background-color: rgba(255, 255, 255, 0.8); 
