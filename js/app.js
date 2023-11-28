@@ -26,3 +26,35 @@ function startTimer() {
     }
   }
 }
+
+function pauseTimer() {
+  clearTimeout(timer);
+  isTimerRunning = false;
+}
+
+function resetTimer() {
+  clearTimeout(timer);
+  isTimerRunning = false;
+
+  document.getElementById("timer").innerText = "00:00:00";
+  document.getElementById("inputTime").value = "";
+}
+
+function displayTime(seconds) {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const remainingSeconds = seconds % 60;
+
+  const formattedTime = `${formatTime(hours)}:${formatTime(
+    minutes
+  )}:${formatTime(remainingSeconds)}`;
+  document.getElementById("timer").innerText = formattedTime;
+}
+
+function formatTime(time) {
+  if (time < 10) {
+    return "0" + time;
+  } else {
+    return time.toString();
+  }
+}
